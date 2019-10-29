@@ -6,5 +6,5 @@ using UnityEngine;
 
 public class MoveSpeedComponent : IComponentData
 {
-    public float moveSpeed;
+    public float value;
 }

@@ -2,10 +2,10 @@
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
-using UnityEngine;
 
+//Edited from PhilSA ECSPhysics Repository https://github.com/PhilSA/ECSPhysics
 [Serializable]
-public struct MeshInstanceRendererComponent : IComponentData
+public struct RigidbodyComponent : IComponentData
 {
     // Add fields to your component here. Remember that:
     //
@@ -20,6 +20,8 @@ public struct MeshInstanceRendererComponent : IComponentData
     // * You should focus on the data structure that makes the most sense
     //   for runtime use here. Authoring Components will be used for 
     //   authoring the data in the Editor.
-    public Mesh mesh;
-    public Material material;
+    public byte isKinematic;
+    public float InverseMass;
+    public float3 CenterOfMass;
+    public float3x3 MomentOfInertia;
 }

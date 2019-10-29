@@ -13,15 +13,4 @@ public class MovementSystem : JobComponentSystem
     {
         throw new System.NotImplementedException();
     }
-
-    [BurstCompile]
-
-    //[ComputeJobOptimization]
-    private struct MovementJob : IJobForEach<Translation, Rotation, MoveSpeedComponent>
-    {
-        public void Execute(ref Translation c0, ref Rotation c1, ref MoveSpeedComponent c2)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }
